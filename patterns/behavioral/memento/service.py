@@ -8,16 +8,24 @@ def state_update_mockup(
     caretaker: Caretaker, originator: Originator, n_iter: int = 10
 ):
     for i in range(n_iter):
-        caretaker.store_state() # Store the program state
-        originator.alter_state() # Alter the program state
+        # Store the program state
+        caretaker.store_state()
+
+        # Alter the program state
+        originator.alter_state()
 
 if __name__ == "__main__":
-    state_update_mockup(caretaker, originator, 10) # Update `n` times the program state
+    # Update `n` times the program state
+    state_update_mockup(caretaker, originator, 10)
 
-    caretaker.store_state() # Store the last originator state
+    # Store the last originator state
+    caretaker.store_state()
 
-    caretaker.show_log() # Show all the logging states stored in the caretaker
+    # Show all the logging states stored in the caretaker
+    caretaker.show_log()
 
-    caretaker.undo() # Change the originator to the previous state
+    # Change the originator to the previous state
+    caretaker.undo()
 
-    caretaker.undo() # Change the originator to the state before the latest
+    # Change the originator to the state before the latest
+    caretaker.undo()
