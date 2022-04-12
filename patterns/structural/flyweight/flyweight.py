@@ -30,12 +30,12 @@ class FlyweightFactory:
         key = self.get_key(shared_state)
 
         if not self._flyweights.get(key):
-            print(
-                f"\033[31mflyweight not found, creating a flyweight for: {key}\033[0m"
-            )
             self._flyweights[key] = Flyweight(shared_state)
+            print(
+                f"\033[31mflyweight not found, creating a flyweight for: {self._flyweights[key]}\033[0m"
+            )
             return self._flyweights[key]
-        print(f"flyweight found -> {self._flyweights[key]}")
+        print(f"\033[32mflyweight found -> {self._flyweights[key]}\033[0m")
         return self._flyweights[key]
 
     def show(self):
