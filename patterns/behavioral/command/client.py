@@ -1,5 +1,6 @@
-from command import Command, Invoker, Receiver, CommandPaulo, CommandKasagari
-
+from command import CommandPaulo, CommandKasagari
+from receiver import Receiver
+from invoker import Invoker
 
 # commands
 
