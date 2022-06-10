@@ -24,16 +24,3 @@ class Adapter(AbstractAdapter):
 
     def request(self) -> str:
         return f"Adaptando: {self.service.specific_request()[::-1]}"
-
-
-def client_code(api: API) -> None:
-    print(api.request())
-
-
-api = API()
-
-client_code(api)
-
-adapter = Adapter()
-
-client_code(adapter)
